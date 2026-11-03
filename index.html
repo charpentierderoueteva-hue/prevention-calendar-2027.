@@ -1,0 +1,1582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prevention Calendar 2027</title>
+  <meta name="description" content="14 health moments, 5 big bets, every project tied to a P&amp;L lever.">
+  <meta name="theme-color" content="#4661aa">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon-192.png" type="image/png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Prevention 27">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+  <script>
+    /* EDITABLE CONTENT.
+       ISO dates below encode its stated dates or full calendar months.
+       Project milestones are calculated using its timeline rule.
+       Provisional dates remain explicitly marked.
+       Each moment carries its own source link. */
+    const moments = [
+      {
+        id: "dry-january",
+        month: 0,
+        priority: "Quick win",
+        moment: "Dry January (Défi de janvier)",
+        dates: "1–31 Jan",
+        dateStatus: "Every January",
+        lever: "Retention",
+        markets: "FR; BE equivalent: Tournée Minérale in February",
+        project: "Make the 31-day challenge the first thing new members do: many company contracts start or renew on 1 January",
+        why: "January is onboarding month; an early habit in the app is the cheapest retention lever",
+        kpi: "Share of new members who join in week 1; app activity in February vs non-participants",
+        teams: "Product, Brand, Mo team (Mo is available in France only)",
+        phases: [
+          { label: "Challenge", start: "2027-01-01", end: "2027-01-31" }
+        ],
+        source: "https://dryjanuary.fr"
+      },
+      {
+        id: "screening-wave-1",
+        month: 1,
+        priority: "Big bet",
+        moment: "World Cancer Day: screening programme, wave 1",
+        dates: "4 Feb",
+        dateStatus: "Fixed date",
+        lever: "Claims cost",
+        markets: "All markets",
+        project: "Personalised screening reminders by age and sex, with a randomised control group",
+        why: "Tests the core thesis in numbers: does a nudge from Alan bring screening forward?",
+        kpi: "Screening rate, reminder group vs control group, at 90 days",
+        teams: "Product, Data, Medical",
+        phases: [
+          { label: "Screening wave 1", start: "2027-02-04", end: "2027-02-04" }
+        ],
+        source: "https://www.worldcancerday.org"
+      },
+      {
+        id: "hearing",
+        month: 2,
+        priority: "Option",
+        moment: "Hearing health: World Hearing Day + Journée nationale de l'audition",
+        dates: "3 Mar and Thu 11 Mar",
+        dateStatus: "3 Mar fixed; 11 Mar to confirm (2nd Thursday of March)",
+        lever: "Claims cost",
+        markets: "FR",
+        project: "Two-page go/no-go memo for the CEO on a hearing category: market size, partners, impact on reimbursements",
+        why: "Optics shows the playbook; hearing is the obvious next candidate to test on paper first",
+        kpi: "Memo delivered by the readout date, decision taken",
+        teams: "Strategy, Insurance, Alan Shop",
+        phases: [
+          {
+            label: "Hearing health",
+            start: "2027-03-03",
+            end: "2027-03-11",
+            endTentative: true,
+            endLabel: "Journée nationale de l'audition"
+          }
+        ],
+        source: "https://www.who.int/campaigns/world-hearing-day"
+      },
+      {
+        id: "screening-wave-2",
+        month: 2,
+        priority: "Quick win",
+        moment: "Mars bleu: screening programme, wave 2",
+        dates: "All of March",
+        dateStatus: "Every March",
+        lever: "Claims cost",
+        markets: "FR (national programme)",
+        project: "One-tap link to the free colorectal home kit for members aged 50–74 (orderable online since March 2022)",
+        why: "Almost no build cost, a free test paid by the Assurance Maladie, and a clear measurable action",
+        kpi: "Kit orders through the link among eligible members, vs wave 1 control group",
+        teams: "Product, Medical",
+        phases: [
+          { label: "Screening wave 2", start: "2027-03-01", end: "2027-03-31" }
+        ],
+        source: "https://monkit.depistage-colorectal.fr"
+      },
+      {
+        id: "sleep",
+        month: 2,
+        priority: "Quick win",
+        moment: "Journée du sommeil / World Sleep Day",
+        dates: "Fri 19 Mar",
+        dateStatus: "To confirm (Friday before the March equinox)",
+        lever: "Brand",
+        markets: "All markets",
+        project: "Opt-in members' sleep survey in all four countries, turned into a data story and a CEO post",
+        why: "Earned media built on Alan's own audience, at near-zero cost",
+        kpi: "Survey responses, press pickups, reach of the CEO post",
+        teams: "Brand, Data, CEO office",
+        phases: [
+          {
+            label: "Sleep",
+            start: "2027-03-19",
+            end: "2027-03-19",
+            tentative: true
+          }
+        ],
+        source: "https://worldsleepday.org"
+      },
+      {
+        id: "scorecard",
+        month: 3,
+        priority: "Big bet",
+        moment: "World Health Day: annual prevention scorecard",
+        dates: "7 Apr",
+        dateStatus: "Fixed date",
+        lever: "Acquisition",
+        markets: "All markets",
+        project: "Publish the previous year's prevention results (waves, challenges, tobacco cohort) as a CEO memo and a one-page sales asset",
+        why: "Turns scattered campaigns into proof that prevention pays, the argument every prospect needs",
+        kpi: "Use of the scorecard in sales decks, deals where it is cited",
+        teams: "CEO office, Data, Sales",
+        phases: [
+          { label: "Scorecard", start: "2027-04-07", end: "2027-04-07" }
+        ],
+        source: "https://www.who.int/campaigns/world-health-day"
+      },
+      {
+        id: "cycling",
+        month: 4,
+        priority: "Run",
+        moment: "Mai à vélo, with a September relaunch",
+        dates: "1–31 May; relaunch 16–22 Sep",
+        dateStatus: "Every May; European Mobility Week fixed every September",
+        lever: "Acquisition",
+        markets: "FR",
+        project: "Inter-company challenge open to prospects' teams; relaunch during European Mobility Week to test whether the habit sticks",
+        why: "A feel-good campaign that brings prospect companies into the product before the autumn sales season",
+        kpi: "Prospect companies joining, meetings booked, September return rate",
+        teams: "Growth, Sales, Product",
+        phases: [
+          { label: "Mai à vélo", start: "2027-05-01", end: "2027-05-31" },
+          {
+            label: "European Mobility Week relaunch",
+            start: "2027-09-16",
+            end: "2027-09-22"
+          }
+        ],
+        source: "https://maiavelo.fr"
+      },
+      {
+        id: "tobacco-sign-up",
+        month: 4,
+        priority: "Quick win",
+        moment: "World No Tobacco Day: tobacco programme, sign-up",
+        dates: "31 May",
+        dateStatus: "Fixed date",
+        lever: "Claims cost",
+        markets: "All markets",
+        project: "Open pre-registration for the November quit programme, and test whether early sign-ups finish more often",
+        why: "Builds the November cohort six months ahead, so the big bet starts with a list",
+        kpi: "Pre-registrations; November completion, early vs late sign-ups",
+        teams: "Product, Data",
+        phases: [
+          { label: "Sign-up", start: "2027-05-31", end: "2027-05-31" }
+        ],
+        source: "https://www.who.int/campaigns/world-no-tobacco-day"
+      },
+      {
+        id: "qvct",
+        month: 5,
+        priority: "Run",
+        moment: "Semaine QVCT (Anact)",
+        dates: "Mid-June",
+        dateStatus: "To confirm (2026: 15–19 Jun)",
+        lever: "Acquisition",
+        markets: "FR",
+        project: "Founders' roundtable hosted by the CEO on health at work, turned into a short public playbook",
+        why: "A point of view in front of decision-makers, four months before the switching deadline",
+        kpi: "Attendees from target accounts, opportunities opened before 31 Oct",
+        teams: "CEO office, Brand, Sales",
+        phases: [
+          { label: "Semaine QVCT", start: "2027-06-14", end: "2027-06-18", tentative: true }
+        ],
+        source: "https://www.anact.fr/semaine-pour-la-qualite-de-vie-et-des-conditions-de-travail"
+      },
+      {
+        id: "screening-wave-3",
+        month: 9,
+        priority: "Run",
+        moment: "Octobre rose: screening programme, wave 3",
+        dates: "All of October",
+        dateStatus: "Every October",
+        lever: "Retention",
+        markets: "All markets",
+        project: "Breast-screening reminders and content co-created with a recognised association",
+        why: "Closes the screening programme with a moment members already know; credibility through a partner",
+        kpi: "Screening rate vs control, content engagement",
+        teams: "Product, Partnerships, Medical",
+        phases: [
+          { label: "Screening wave 3", start: "2027-10-01", end: "2027-10-31" }
+        ],
+        source: "https://www.cancerdusein.org"
+      },
+      {
+        id: "mental-health",
+        month: 9,
+        priority: "Big bet",
+        moment: "Mental health fortnight: SISM + World Mental Health Day",
+        dates: "About 4–17 Oct; 10 Oct",
+        dateStatus: "10 Oct fixed; SISM dates to confirm (2026: 5–18 Oct)",
+        lever: "Acquisition",
+        markets: "FR (SISM); all markets (10 Oct)",
+        project: "Mental-health proof pack for sales: anonymised, aggregated Alan Mind results and one client case study",
+        why: "Lands two weeks before 31 October, the usual notice deadline for a 1 January switch",
+        kpi: "Deals where the pack was used and signed before 31 Oct",
+        teams: "Sales, Alan Mind, Data, Legal",
+        phases: [
+          {
+            label: "SISM",
+            start: "2027-10-04",
+            end: "2027-10-17",
+            tentative: true
+          }
+        ],
+        fixedDates: [
+          { label: "World Mental Health Day", date: "2027-10-10" }
+        ],
+        source: "https://www.semaines-sante-mentale.fr"
+      },
+      {
+        id: "sight",
+        month: 9,
+        priority: "Big bet",
+        moment: "World Sight Day: optical network, year one",
+        dates: "Thu 14 Oct",
+        dateStatus: "Rule: 2nd Thursday of October",
+        lever: "Claims cost",
+        markets: "FR",
+        project: "Eye-check reminder plus renewal journey through Alan Shop, to grow use of the optical network planned for 2027",
+        why: "Every pair bought through Alan's channel costs the insurer less: the most direct claims lever on this calendar",
+        kpi: "Share of members' glasses bought through Alan's channel, before vs after",
+        teams: "Alan Shop, Growth, Data",
+        phases: [
+          { label: "Optical network", start: "2027-10-14", end: "2027-10-14" }
+        ],
+        source: "https://www.iapb.org/world-sight-day/"
+      },
+      {
+        id: "tobacco-run",
+        month: 10,
+        priority: "Big bet",
+        moment: "Mois sans tabac: tobacco programme, run",
+        dates: "1–30 Nov",
+        dateStatus: "Every November (11th edition in 2026)",
+        lever: "Claims cost",
+        markets: "FR",
+        project: "Run the cohort built since May, with coaching in the app and a 3-month follow-up",
+        why: "Tobacco caused over 68,000 premature deaths in France in 2023: the clearest prevention story",
+        kpi: "Participants, 30-day completion, self-reported abstinence at 3 months",
+        teams: "Product, Medical, Partnerships",
+        phases: [
+          { label: "Tobacco programme", start: "2027-11-01", end: "2027-11-30" }
+        ],
+        source: "https://mois-sans-tabac.tabac-info-service.fr"
+      },
+      {
+        id: "movember",
+        month: 10,
+        priority: "Run",
+        moment: "Movember",
+        dates: "All of November",
+        dateStatus: "Every November",
+        lever: "Claims cost",
+        markets: "All markets",
+        project: "Men's check-up push fronted by Alan's sports ambassador",
+        why: "Reaches members prevention usually misses",
+        kpi: "Check-ups booked by men aged 40+ vs November last year",
+        teams: "Brand, Growth",
+        phases: [
+          { label: "Movember", start: "2027-11-01", end: "2027-11-30" }
+        ],
+        source: "https://fr.movember.com"
+      }
+    ];
+
+    const insights = [
+      {
+        title: "October decides the year",
+        text: "Employers usually have to give notice by 31 October to switch insurer on 1 January, so autumn moments must feed the sales pitch.",
+        source: "https://alan.com/fr-fr/assurance-sante/mutuelle-entreprise/a/changer-mutuelle-entreprise"
+      },
+      {
+        title: "2027 raises the stakes",
+        text: "The draft social security budget shifts about €1.2bn of reimbursements to complementary insurers, so every avoided claim is worth more.",
+        source: "https://www.vie-publique.fr/node/305082"
+      },
+      {
+        title: "Programmes beat one-off days",
+        text: "Screening runs in three waves (February, March, October) and tobacco from a May sign-up to a November run, each with a control group or a before/after measure.",
+        source: null
+      }
+    ];
+
+    const timelineRule = {
+      kickOffDays: -42,
+      readyDays: -7,
+      readoutDays: 14,
+      text: "Timeline rule unless stated otherwise: kick-off 6 weeks before launch, ready 1 week before, readout 2 weeks after the end.",
+      dateNote: 'Dates marked "to confirm" were not yet announced on 03.11.2026.'
+    };
+  </script>
+
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #292b38;
+      --muted: #616573;
+      --blue: #4661aa;
+      --sky: #e0f0fc;
+      --line: #e4e8ef;
+      --claims: #e8f0fd;
+      --acquisition: #eee9fb;
+      --retention: #e6f3ed;
+      --brand: #fff0e5;
+      --shadow: 0 6px 24px rgb(38 50 78 / 5%);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: #fff;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    button { font: inherit; }
+    a { color: #365493; text-underline-offset: 3px; }
+    a:hover { text-decoration-thickness: 2px; }
+    :focus-visible {
+      outline: 3px solid var(--blue);
+      outline-offset: 5px;
+    }
+    [hidden] { display: none !important; }
+
+    .skip-link {
+      position: absolute;
+      z-index: 5;
+      top: -80px;
+      left: 16px;
+      padding: 10px 18px;
+      border-radius: 12px;
+      background: white;
+    }
+    .skip-link:focus { top: 16px; }
+    .shell { width: min(1080px, calc(100% - 36px)); margin-inline: auto; }
+
+    .hero {
+      padding: 64px 0 48px;
+      background: linear-gradient(160deg, #dceffc 0%, #edf6fe 65%, #f6faff 100%);
+      border-radius: 0 0 36px 36px;
+    }
+    h1 {
+      max-width: 800px;
+      margin: 0;
+      font-size: clamp(2.4rem, 6vw, 4.6rem);
+      font-weight: 720;
+      letter-spacing: -.055em;
+      line-height: 1.06;
+      text-wrap: balance;
+    }
+    .subtitle {
+      max-width: 670px;
+      margin: 24px 0 36px;
+      color: #4c566c;
+      font-size: clamp(1.05rem, 2.5vw, 1.35rem);
+      text-wrap: balance;
+    }
+    .insights { display: grid; gap: 16px; }
+    .insight { margin: 0; max-width: 920px; font-size: .94rem; }
+    .insight strong { font-weight: 700; }
+    .source-inline { margin-left: 6px; font-size: .8rem; white-space: nowrap; }
+
+    .summary-strip {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin: 32px 0;
+    }
+    .stat {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+    }
+    .stat-number { font-size: 1.9rem; line-height: 1; font-weight: 700; }
+    .stat-label { color: var(--muted); font-size: .9rem; }
+
+    .toolbar {
+      padding: 24px 0 28px;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    fieldset { min-width: 0; margin: 0 0 18px; padding: 0; border: 0; }
+    legend { margin-bottom: 10px; font-size: .83rem; font-weight: 700; }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+    .chip, .month-button {
+      border: 1px solid #dce2ed;
+      border-radius: 999px;
+      background: white;
+      color: var(--ink);
+      padding: 9px 16px;
+      cursor: pointer;
+      transition: background .15s, border-color .15s;
+    }
+    .chip:hover { background: #f0f5fc; }
+    .chip[aria-pressed="true"] {
+      border-color: var(--blue);
+      background: #e8effc;
+      color: #243f7b;
+      box-shadow: inset 0 0 0 1px var(--blue);
+    }
+    .toolbar-bottom {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .month-button {
+      border-color: var(--blue);
+      background: var(--blue);
+      color: white;
+      border-radius: 14px;
+    }
+    .month-button:hover { background: #344d90; }
+    .small { font-size: .83rem; color: var(--muted); }
+    .actions { display: flex; flex-wrap: wrap; gap: 8px; }
+    .action {
+      border: 1px solid var(--blue);
+      border-radius: 14px;
+      background: white;
+      color: #243f7b;
+      padding: 9px 16px;
+      cursor: pointer;
+    }
+    .action:hover { background: #f0f5fc; }
+    .card-actions { margin-top: 18px; }
+    .install-hint { flex-basis: 100%; margin: 0; }
+
+    .toolbar-bottom { row-gap: 14px; }
+    .view-toggle {
+      display: inline-flex;
+      padding: 4px;
+      border-radius: 14px;
+      background: #eef2f8;
+    }
+    .view-btn {
+      border: 0;
+      border-radius: 10px;
+      background: transparent;
+      color: #46516b;
+      padding: 7px 16px;
+      cursor: pointer;
+    }
+    .view-btn[aria-pressed="true"] {
+      background: white;
+      color: #243f7b;
+      font-weight: 650;
+      box-shadow: 0 1px 4px rgb(38 50 78 / 12%);
+    }
+
+    .month-view { padding: 28px 0 12px; }
+    .mv-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 14px;
+    }
+    .mv-header h2 { margin: 0; font-size: 1.3rem; letter-spacing: -.025em; }
+    .mv-nav {
+      width: 40px;
+      height: 40px;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      background: white;
+      color: #243f7b;
+      font-size: 1.4rem;
+      line-height: 1;
+      cursor: pointer;
+    }
+    .mv-nav:disabled { opacity: .35; cursor: default; }
+    .mv-weekdays, .mv-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 6px;
+    }
+    .mv-weekdays span {
+      color: var(--muted);
+      font-size: .72rem;
+      font-weight: 650;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+    }
+    .mv-grid { margin-top: 8px; }
+    .mv-cell {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 5px;
+      min-height: 54px;
+      padding: 7px 2px;
+      border: 1px solid transparent;
+      border-radius: 14px;
+      background: #f8fafd;
+      color: var(--ink);
+      font-size: .9rem;
+      cursor: pointer;
+    }
+    .mv-cell.empty-cell { background: transparent; cursor: default; }
+    .mv-cell.has-events { background: white; border-color: var(--line); box-shadow: var(--shadow); }
+    .mv-cell.today .mv-num {
+      display: grid;
+      place-items: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: var(--blue);
+      color: white;
+    }
+    .mv-cell[aria-pressed="true"] { border-color: var(--blue); box-shadow: inset 0 0 0 1px var(--blue); }
+    .mv-cell.deadline-day { background: #f2f5fb; }
+    .mv-dots { display: flex; flex-wrap: wrap; justify-content: center; gap: 3px; max-width: 34px; }
+    .dot {
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+    }
+    .dot.big-bet { background: #233e75; }
+    .dot.quick-win { background: #3a8f62; }
+    .dot.run { background: #a3a9b4; }
+    .dot.option { background: white; border: 1.5px solid #8b929f; }
+    .mv-more { font-size: .62rem; color: var(--muted); line-height: 1; }
+    .mv-legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin: 16px 0 6px;
+      color: var(--muted);
+      font-size: .78rem;
+    }
+    .mv-legend span { display: inline-flex; align-items: center; gap: 6px; }
+    .mv-day { margin-top: 18px; }
+    .mv-day h3 { margin: 0 0 10px; font-size: 1rem; }
+    .mv-list { display: grid; gap: 10px; list-style: none; padding: 0; margin: 0; }
+    .mv-item {
+      display: grid;
+      gap: 6px;
+      width: 100%;
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: white;
+      color: var(--ink);
+      text-align: left;
+      box-shadow: var(--shadow);
+      cursor: pointer;
+    }
+    .mv-item:hover { background: #fcfdff; }
+    .mv-item-top { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+    .mv-type { font-size: .8rem; font-weight: 700; color: #46516b; text-transform: uppercase; letter-spacing: .03em; }
+    .mv-name { font-weight: 650; line-height: 1.35; }
+    .mv-hint { font-size: .8rem; color: var(--muted); }
+    .rule { max-width: 800px; margin: 22px 0 0; }
+    .rule span { display: block; margin-top: 4px; }
+
+    .calendar {
+      position: relative;
+      padding: 36px 0 12px 22px;
+    }
+    .calendar::before {
+      content: "";
+      position: absolute;
+      top: 46px;
+      bottom: 50px;
+      left: 4px;
+      width: 1px;
+      background: #d9e2f0;
+    }
+    .month {
+      position: relative;
+      margin-bottom: 36px;
+      scroll-margin-top: 24px;
+    }
+    .month h2 {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin: 0 0 18px;
+      font-size: 1.3rem;
+      letter-spacing: -.025em;
+    }
+    .month h2::before {
+      content: "";
+      position: absolute;
+      top: 12px;
+      left: -22px;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: #7f9dd1;
+      box-shadow: 0 0 0 5px white;
+    }
+    .month-year { color: var(--muted); font-size: .8rem; font-weight: 450; }
+    .month-body { display: grid; gap: 16px; }
+    .empty { margin: 0; color: var(--muted); font-size: .88rem; }
+
+    .card {
+      overflow: hidden;
+      border: 1px solid #e3e7ee;
+      border-radius: 22px;
+      background: white;
+      box-shadow: var(--shadow);
+    }
+    .claims-cost { --tint: var(--claims); }
+    .acquisition { --tint: var(--acquisition); }
+    .retention { --tint: var(--retention); }
+    .brand { --tint: var(--brand); }
+
+    summary {
+      position: relative;
+      padding: 22px;
+      border-left: 5px solid var(--tint);
+      list-style: none;
+      cursor: pointer;
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary:hover { background: #fcfdff; }
+    .card[open] summary {
+      background: linear-gradient(120deg, var(--tint), #fff 90%);
+      border-bottom: 1px solid var(--line);
+    }
+    .card-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      padding-right: 30px;
+      margin-bottom: 12px;
+    }
+    .badge, .lever-tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: .72rem;
+      font-weight: 650;
+      line-height: 1.5;
+    }
+    .big-bet { color: white; background: #233e75; }
+    .quick-win { color: #24523d; background: #d9efdf; }
+    .run { color: #515863; background: #eceef1; }
+    .option { color: #5f6572; background: transparent; border: 1px solid #8b929f; }
+    .lever-tag { background: var(--tint); color: #41485b; }
+    .unconfirmed {
+      color: #765c2a;
+      background: #fff7df;
+      border: 1px solid #ecdfb6;
+      font-weight: 500;
+    }
+    .card-title {
+      display: block;
+      margin-bottom: 7px;
+      padding-right: 12px;
+      font-size: 1.12rem;
+      font-weight: 700;
+      line-height: 1.4;
+      letter-spacing: -.02em;
+    }
+    .card-dates { display: block; color: var(--muted); font-size: .87rem; }
+    .project-line {
+      display: block;
+      overflow: hidden;
+      margin-top: 14px;
+      color: #525969;
+      font-size: .9rem;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+    .toggle {
+      position: absolute;
+      top: 23px;
+      right: 20px;
+      display: grid;
+      place-items: center;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background: #f0f3f8;
+      color: #43577a;
+    }
+    .toggle::before { content: "+"; font-size: 1.1rem; line-height: 1; }
+    details[open] .toggle::before { content: "−"; }
+    .card-body { padding: 24px; }
+    .facts { display: grid; gap: 20px; margin: 0; }
+    .fact dt, .steps-title {
+      margin: 0 0 5px;
+      color: #46516b;
+      font-size: .76rem;
+      font-weight: 750;
+      letter-spacing: .035em;
+      text-transform: uppercase;
+    }
+    .fact dd { margin: 0; font-size: .92rem; }
+    .full-width { grid-column: 1 / -1; }
+    .steps-group {
+      margin-top: 24px;
+      padding: 18px;
+      background: #f8fafd;
+      border: 1px solid #edf0f5;
+      border-radius: 15px;
+    }
+    .steps-group h4 { margin: 0 0 12px; font-size: .92rem; }
+    .steps { display: grid; gap: 10px; list-style: none; padding: 0; margin: 0; }
+    .step { display: grid; gap: 2px; font-size: .85rem; }
+    .step-label { color: var(--muted); }
+    .step-date { font-weight: 600; }
+    .source-note { margin: 20px 0 0; font-size: .82rem; color: var(--muted); }
+    .relaunch {
+      padding: 18px 20px;
+      border-radius: 18px;
+      background: var(--acquisition);
+      font-size: .9rem;
+    }
+    .relaunch a { display: block; margin-top: 5px; }
+    .deadline {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px 12px;
+      margin: 14px 0 0;
+      padding: 14px 0 0;
+      border-top: 1px solid #8199c1;
+      color: #3f5274;
+      font-size: .82rem;
+    }
+    .deadline time { font-weight: 750; }
+    footer {
+      margin-top: 24px;
+      padding: 32px 0 44px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: .82rem;
+    }
+    footer p { margin-top: 0; }
+    footer h2 { margin-top: 24px; font-size: .9rem; color: var(--ink); }
+    .sources { padding-left: 20px; }
+    .sources li { margin: 8px 0; overflow-wrap: anywhere; }
+    noscript p { padding: 24px; }
+
+    @media (min-width: 640px) {
+      .shell { width: min(1080px, calc(100% - 64px)); }
+      .hero { padding: 86px 0 58px; border-radius: 0 0 52px 52px; }
+      .summary-strip { grid-template-columns: repeat(4, 1fr); }
+      .calendar { padding-left: 38px; }
+      .calendar::before { left: 8px; }
+      .month h2::before { left: -34px; }
+      .facts { grid-template-columns: 1fr 1fr; gap: 24px; }
+      .step { grid-template-columns: 150px 1fr; gap: 18px; }
+      summary { padding: 26px 28px; }
+      .card-body { padding: 28px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      * { transition: none !important; }
+    }
+    @media print {
+      .skip-link, .toolbar, .toggle, .action, .actions, .month-view { display: none !important; }
+      .hero { padding: 24px 0; background: white; }
+      .shell { width: 100%; }
+      .card { box-shadow: none; break-inside: avoid; }
+      .card-body { display: block !important; }
+      .project-line { white-space: normal; }
+      .calendar::before { display: none; }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#calendar">Skip to calendar</a>
+
+  <header class="hero">
+    <div class="shell">
+      <h1>Prevention Calendar 2027</h1>
+      <p class="subtitle">14 health moments, 5 big bets, every project tied to a P&amp;L lever</p>
+      <div class="insights" id="insights" aria-label="Key insights"></div>
+    </div>
+  </header>
+
+  <main class="shell">
+    <section class="summary-strip" id="summary" aria-label="Counts by priority"></section>
+
+    <section class="toolbar" aria-label="Calendar filters">
+      <fieldset>
+        <legend>Priority</legend>
+        <div class="chips" id="priority-filters"></div>
+      </fieldset>
+
+      <fieldset>
+        <legend>P&amp;L lever</legend>
+        <div class="chips" id="lever-filters"></div>
+      </fieldset>
+
+      <div class="toolbar-bottom">
+        <p class="small" id="results" role="status" aria-live="polite" aria-atomic="true"></p>
+        <div class="view-toggle" role="group" aria-label="View">
+          <button type="button" class="view-btn" data-view="timeline" aria-pressed="true">Timeline</button>
+          <button type="button" class="view-btn" data-view="month" aria-pressed="false">Month</button>
+        </div>
+        <div class="actions">
+          <button type="button" class="month-button" id="this-month">This month</button>
+          <button type="button" class="action" id="export-ics">Add to calendar (.ics)</button>
+          <button type="button" class="action" id="export-csv">Export tracker (.csv)</button>
+          <button type="button" class="action" id="install-app" hidden>Install as an app</button>
+        </div>
+        <p class="small install-hint" id="install-hint" hidden>On iPhone or iPad: open this page in Safari, tap Share, then "Add to Home Screen". On Android: open the browser menu, then "Install app".</p>
+      </div>
+    </section>
+
+    <div class="calendar" id="calendar" tabindex="-1" aria-label="2027 monthly timeline"></div>
+
+    <section class="month-view" id="month-view" aria-label="Month view" hidden>
+      <div class="mv-header">
+        <button type="button" class="mv-nav" id="mv-prev" aria-label="Previous month">&#8249;</button>
+        <h2 id="mv-title"></h2>
+        <button type="button" class="mv-nav" id="mv-next" aria-label="Next month">&#8250;</button>
+      </div>
+      <div class="mv-weekdays" aria-hidden="true">
+        <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+      </div>
+      <div class="mv-grid" id="mv-grid"></div>
+      <div class="mv-legend" aria-hidden="true">
+        <span><i class="dot big-bet"></i>Big bet</span>
+        <span><i class="dot quick-win"></i>Quick win</span>
+        <span><i class="dot run"></i>Run</span>
+        <span><i class="dot option"></i>Option</span>
+      </div>
+      <div class="mv-day" id="mv-day" aria-live="polite"></div>
+    </section>
+
+    <footer>
+      <p>Personal prototype by Eva Charpentier-Derouet, November 2026. Not an Alan product.</p>
+      <h2>Sources</h2>
+      <ul class="sources" id="sources"></ul>
+    </footer>
+  </main>
+
+  <noscript>
+    <p>Please enable JavaScript to view the calendar.</p>
+  </noscript>
+
+  <script>
+    "use strict";
+
+    const months = [
+      "January", "February", "March", "April", "May", "June",
+      "July", "August", "September", "October", "November", "December"
+    ];
+    const priorities = ["Big bet", "Quick win", "Run", "Option"];
+    const levers = ["Claims cost", "Acquisition", "Retention", "Brand"];
+    const state = { priority: "All", lever: "All" };
+    const monthBodies = [];
+
+    function node(tag, className, text) {
+      const element = document.createElement(tag);
+      if (className) element.className = className;
+      if (text !== undefined) element.textContent = text;
+      return element;
+    }
+
+    function slug(value) {
+      return value.toLowerCase().replaceAll(" ", "-");
+    }
+
+    function link(text, url) {
+      const anchor = node("a", "", text);
+      anchor.href = url;
+      anchor.target = "_blank";
+      anchor.rel = "noopener noreferrer";
+      return anchor;
+    }
+
+    // UTC arithmetic keeps derived dates independent of daylight saving.
+    function shiftDate(iso, days) {
+      const date = new Date(iso + "T12:00:00Z");
+      date.setUTCDate(date.getUTCDate() + days);
+      return date.toISOString().slice(0, 10);
+    }
+
+    function formatDate(iso) {
+      return new Intl.DateTimeFormat("en-GB", {
+        day: "numeric",
+        month: "short",
+        year: "numeric",
+        timeZone: "UTC"
+      }).format(new Date(iso + "T12:00:00Z"));
+    }
+
+    function matches(moment) {
+      return (state.priority === "All" || state.priority === moment.priority) &&
+             (state.lever === "All" || state.lever === moment.lever);
+    }
+
+    function addFact(list, title, text, wide = false) {
+      const wrapper = node("div", "fact" + (wide ? " full-width" : ""));
+      wrapper.append(node("dt", "", title), node("dd", "", text));
+      list.append(wrapper);
+    }
+
+    function addStep(list, label, iso, tentative = false, fallback = "") {
+      const item = node("li", "step");
+      item.append(node("span", "step-label", label));
+
+      if (iso) {
+        const date = node("time", "step-date", formatDate(iso));
+        date.dateTime = iso;
+        const value = node("span");
+        value.append(date);
+        if (tentative) value.append(document.createTextNode(" · to confirm"));
+        item.append(value);
+      } else {
+        item.append(node("span", "step-date", fallback));
+      }
+
+      list.append(item);
+    }
+
+    function makePhase(phase) {
+      const group = node("section", "steps-group");
+      group.append(node("h4", "", phase.label));
+      const steps = node("ol", "steps");
+
+      if (phase.approximate) {
+        addStep(steps, "Kick-off", null, false, "6 weeks before launch · date to confirm");
+        addStep(steps, "Ready", null, false, "1 week before launch · date to confirm");
+        addStep(steps, "Launch", null, false, phase.approximate + " · to confirm");
+        addStep(steps, "Readout", null, false, "2 weeks after the end · date to confirm");
+      } else {
+        const startTentative = Boolean(phase.tentative);
+        const endTentative = Boolean(phase.tentative || phase.endTentative);
+
+        addStep(steps, "Kick-off",
+          shiftDate(phase.start, timelineRule.kickOffDays), startTentative);
+        addStep(steps, "Ready",
+          shiftDate(phase.start, timelineRule.readyDays), startTentative);
+        addStep(steps, "Launch", phase.start, startTentative);
+
+        if (phase.end !== phase.start) {
+          addStep(steps, phase.endLabel || "End", phase.end, endTentative);
+        }
+
+        addStep(steps, "Readout",
+          shiftDate(phase.end, timelineRule.readoutDays), endTentative);
+      }
+
+      group.append(steps);
+      return group;
+    }
+
+    function makeCard(moment) {
+      const card = node("details", "card " + slug(moment.lever));
+      card.id = moment.id;
+
+      const summary = node("summary");
+      const meta = node("span", "card-meta");
+      meta.append(
+        node("span", "badge " + slug(moment.priority), moment.priority),
+        node("span", "lever-tag", moment.lever)
+      );
+
+      if (/to confirm/i.test(moment.dateStatus)) {
+        meta.append(node("span", "badge unconfirmed", "date to confirm"));
+      }
+
+      const toggle = node("span", "toggle");
+      toggle.setAttribute("aria-hidden", "true");
+
+      summary.append(
+        meta,
+        node("span", "card-title", moment.moment),
+        node("span", "card-dates", moment.dates + " · 2027"),
+        node("span", "project-line", "FA project · " + moment.project),
+        toggle
+      );
+
+      const body = node("div", "card-body");
+      const facts = node("dl", "facts");
+      addFact(facts, "FA project", moment.project, true);
+      addFact(facts, "Why it matters", moment.why, true);
+      addFact(facts, "KPI", moment.kpi, true);
+      addFact(facts, "Teams", moment.teams);
+      addFact(facts, "Markets", moment.markets);
+      addFact(facts, "Date status", moment.dateStatus, true);
+      body.append(facts);
+
+      const heading = node("h3", "steps-title", "Project timeline");
+      heading.style.marginTop = "26px";
+      body.append(heading);
+      body.append(node(
+        "p", "small",
+        "Kick-off 6 weeks before launch, ready 1 week before, readout 2 weeks after the end."
+      ));
+
+      moment.phases.forEach(phase => body.append(makePhase(phase)));
+
+      if (moment.fixedDates) {
+        const fixed = node("section", "steps-group");
+        fixed.append(node("h4", "", "Fixed date"));
+        const list = node("ol", "steps");
+        moment.fixedDates.forEach(item => addStep(list, item.label, item.date));
+        fixed.append(list);
+        body.append(fixed);
+      }
+
+      const source = node("p", "source-note");
+      if (moment.source) {
+        source.append(link("Source", moment.source));
+      } else {
+        source.textContent = "Source to be added.";
+      }
+      body.append(source);
+      const cardActions = node("div", "card-actions");
+      const addButton = node("button", "action", "Add this project to my calendar");
+      addButton.type = "button";
+      addButton.addEventListener("click", () => {
+        download(moment.id + ".ics", "text/calendar;charset=utf-8", buildICS([moment]));
+      });
+      cardActions.append(addButton);
+      body.append(cardActions);
+      card.append(summary, body);
+      return card;
+    }
+
+    function buildFilters(id, values, key) {
+      const container = document.getElementById(id);
+
+      ["All", ...values].forEach(value => {
+        const button = node("button", "chip", value);
+        button.type = "button";
+        button.dataset.value = value;
+        button.setAttribute("aria-pressed", String(state[key] === value));
+
+        button.addEventListener("click", () => {
+          state[key] = value;
+          updateFilterButtons();
+          renderCalendar();
+        });
+
+        container.append(button);
+      });
+    }
+
+    function updateFilterButtons() {
+      [
+        ["priority-filters", "priority"],
+        ["lever-filters", "lever"]
+      ].forEach(([id, key]) => {
+        document.querySelectorAll("#" + id + " button").forEach(button => {
+          button.setAttribute(
+            "aria-pressed",
+            String(button.dataset.value === state[key])
+          );
+        });
+      });
+    }
+
+    function openMoment(id) {
+      const card = document.getElementById(id);
+      if (!card) return;
+      card.open = true;
+      card.scrollIntoView({ block: "start", behavior: scrollBehavior() });
+      card.querySelector("summary").focus({ preventScroll: true });
+    }
+
+    function scrollBehavior() {
+      return window.matchMedia("(prefers-reduced-motion: reduce)").matches
+        ? "auto"
+        : "smooth";
+    }
+
+    function renderCalendar() {
+      const openIds = new Set(
+        Array.from(document.querySelectorAll(".card[open]"), card => card.id)
+      );
+      const selected = moments.filter(matches);
+
+      months.forEach((name, index) => {
+        const body = monthBodies[index];
+        body.replaceChildren();
+
+        selected.filter(moment => moment.month === index).forEach(moment => {
+          const card = makeCard(moment);
+          card.open = openIds.has(moment.id);
+          body.append(card);
+        });
+
+        // September points back to the same project; it is not a 15th moment.
+        const cycling = selected.find(moment => moment.id === "cycling");
+        if (index === 8 && cycling) {
+          const relaunch = node("div", "relaunch");
+          relaunch.append(
+            node("strong", "", "16–22 Sep · European Mobility Week relaunch")
+          );
+          const anchor = node("a", "", "Mai à vélo, with a September relaunch");
+          anchor.href = "#cycling";
+          anchor.addEventListener("click", event => {
+            event.preventDefault();
+            openMoment("cycling");
+          });
+          relaunch.append(anchor);
+          body.append(relaunch);
+        }
+
+        if (!body.children.length) {
+          const hasSourceContent = moments.some(moment => moment.month === index) ||
+                                   index === 8;
+          body.append(node(
+            "p", "empty",
+            hasSourceContent
+              ? "No moments match these filters."
+              : "Quiet month: time for readouts and run tasks."
+          ));
+        }
+
+        // Keep the deadline visible regardless of active filters.
+        if (index === 9) {
+          const deadline = node("div", "deadline");
+          const date = node("time", "", "31 October");
+          date.dateTime = "2027-10-31";
+          deadline.append(
+            date,
+            node("span", "", "Notice deadline for 1 January switches")
+          );
+          body.append(deadline);
+        }
+      });
+
+      document.getElementById("results").textContent =
+        selected.length + " of " + moments.length + " health moments";
+      if (view.mode === "month") renderMonth();
+    }
+
+    // ---------- Exports: calendar (.ics) and project tracker (.csv) ----------
+    function milestones(moment) {
+      const out = [];
+      moment.phases.forEach(phase => {
+        if (!phase.start) return;
+        const startTentative = Boolean(phase.tentative);
+        const endTentative = Boolean(phase.tentative || phase.endTentative);
+        out.push({ type: "Kick-off", phase: phase.label, start: shiftDate(phase.start, timelineRule.kickOffDays), end: null, tentative: startTentative });
+        out.push({ type: "Ready", phase: phase.label, start: shiftDate(phase.start, timelineRule.readyDays), end: null, tentative: startTentative });
+        out.push({ type: "Launch", phase: phase.label, start: phase.start, end: phase.end, tentative: endTentative });
+        out.push({ type: "Readout", phase: phase.label, start: shiftDate(phase.end, timelineRule.readoutDays), end: null, tentative: endTentative });
+      });
+      (moment.fixedDates || []).forEach(item => {
+        out.push({ type: item.label, phase: "", start: item.date, end: null, tentative: false });
+      });
+      return out;
+    }
+
+    function icsText(value) {
+      return String(value).replace(/\\/g, "\\\\").replace(/;/g, "\\;")
+        .replace(/,/g, "\\,").replace(/\r?\n/g, "\\n");
+    }
+
+    function fold(line) {
+      const encoder = new TextEncoder();
+      const parts = [];
+      let current = "", bytes = 0, limit = 75;
+      for (const ch of line) {
+        const size = encoder.encode(ch).length;
+        if (bytes + size > limit) { parts.push(current); current = ""; bytes = 0; limit = 74; }
+        current += ch; bytes += size;
+      }
+      parts.push(current);
+      return parts.join("\r\n ");
+    }
+
+    function buildICS(list) {
+      const stamp = new Date().toISOString().replace(/[-:]/g, "").replace(/\.\d{3}/, "");
+      const ymd = iso => iso.replaceAll("-", "");
+      const lines = [
+        "BEGIN:VCALENDAR", "VERSION:2.0",
+        "PRODID:-//Eva Charpentier-Derouet//Prevention Calendar 2027//EN",
+        "CALSCALE:GREGORIAN", "METHOD:PUBLISH", "X-WR-CALNAME:Prevention Calendar 2027"
+      ];
+      list.forEach(moment => {
+        milestones(moment).forEach((m, i) => {
+          const last = m.end || m.start;
+          const description = [
+            "FA project: " + moment.project,
+            "Why it matters: " + moment.why,
+            "KPI: " + moment.kpi,
+            "Teams: " + moment.teams,
+            "Priority: " + moment.priority + " | P&L lever: " + moment.lever,
+            m.tentative ? "Date to confirm: " + moment.dateStatus : "Date status: " + moment.dateStatus,
+            moment.source ? "Source: " + moment.source : ""
+          ].filter(Boolean).join("\n");
+          lines.push(
+            "BEGIN:VEVENT",
+            "UID:" + moment.id + "-" + i + "-" + ymd(m.start) + "@prevention-calendar-2027",
+            "DTSTAMP:" + stamp,
+            "DTSTART;VALUE=DATE:" + ymd(m.start),
+            "DTEND;VALUE=DATE:" + ymd(shiftDate(last, 1)),
+            "SUMMARY:" + icsText("[" + moment.priority + "] " + m.type +
+              (moment.phases.length > 1 && m.phase ? " (" + m.phase + ")" : "") +
+              ": " + moment.moment + (m.tentative ? " (date to confirm)" : "")),
+            "DESCRIPTION:" + icsText(description),
+            "CATEGORIES:" + icsText(moment.priority) + "," + icsText(moment.lever),
+            "TRANSP:TRANSPARENT"
+          );
+          if (moment.source) lines.push("URL:" + moment.source);
+          lines.push("END:VEVENT");
+        });
+      });
+      lines.push("END:VCALENDAR");
+      return lines.map(fold).join("\r\n") + "\r\n";
+    }
+
+    function csvCell(value) {
+      const text = value == null ? "" : String(value);
+      return /[",\n;]/.test(text) ? '"' + text.replace(/"/g, '""') + '"' : text;
+    }
+
+    function buildCSV(list) {
+      const header = ["Priority", "Moment", "P&L lever", "FA project", "Owner", "Status",
+        "Teams", "Markets", "Kick-off", "Ready", "Launch", "End", "Readout",
+        "KPI", "Dates to confirm", "Date status", "Source"];
+      const rows = list.map(moment => {
+        const dated = moment.phases.filter(phase => phase.start);
+        const first = dated[0], last = dated[dated.length - 1];
+        return [
+          moment.priority, moment.moment, moment.lever, moment.project, "", "Not started",
+          moment.teams, moment.markets,
+          shiftDate(first.start, timelineRule.kickOffDays),
+          shiftDate(first.start, timelineRule.readyDays),
+          first.start, last.end,
+          shiftDate(last.end, timelineRule.readoutDays),
+          moment.kpi, /to confirm/i.test(moment.dateStatus) ? "Yes" : "No",
+          moment.dateStatus, moment.source || ""
+        ];
+      });
+      return [header, ...rows].map(row => row.map(csvCell).join(",")).join("\r\n") + "\r\n";
+    }
+
+    function download(name, mime, text) {
+      const blob = new Blob([text], { type: mime });
+      const url = URL.createObjectURL(blob);
+      const anchor = document.createElement("a");
+      anchor.href = url;
+      anchor.download = name;
+      document.body.append(anchor);
+      anchor.click();
+      anchor.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 1000);
+    }
+
+    // ---------- Month view ----------
+    const RANGE_START = { y: 2026, m: 10 };   // November 2026: first kick-offs
+    const RANGE_END = { y: 2027, m: 11 };     // December 2027: last readouts
+    const view = { mode: "timeline", y: 2027, m: 0, day: null, ready: false };
+
+    function monthIndex(y, m) { return y * 12 + m; }
+    function clampToRange(y, m) {
+      const i = Math.min(Math.max(monthIndex(y, m), monthIndex(RANGE_START.y, RANGE_START.m)),
+                         monthIndex(RANGE_END.y, RANGE_END.m));
+      return { y: Math.floor(i / 12), m: i % 12 };
+    }
+    function isoOf(y, m, d) {
+      return y + "-" + String(m + 1).padStart(2, "0") + "-" + String(d).padStart(2, "0");
+    }
+
+    function eventsByDay() {
+      const map = new Map();
+      const add = (iso, item) => {
+        if (!map.has(iso)) map.set(iso, []);
+        map.get(iso).push(item);
+      };
+      moments.filter(matches).forEach(moment => {
+        milestones(moment).forEach(m => {
+          add(m.start, { type: m.type, moment, tentative: m.tentative });
+          if (m.end && m.end !== m.start) {
+            add(m.end, { type: "End", moment, tentative: m.tentative });
+          }
+        });
+      });
+      const order = { "Big bet": 0, "Quick win": 1, "Run": 2, "Option": 3 };
+      map.forEach(list => list.sort((a, b) => order[a.moment.priority] - order[b.moment.priority]));
+      return map;
+    }
+
+    function renderMonth() {
+      if (!view.ready) return;
+      const map = eventsByDay();
+      const grid = document.getElementById("mv-grid");
+      grid.replaceChildren();
+      document.getElementById("mv-title").textContent =
+        new Intl.DateTimeFormat("en-GB", { month: "long", year: "numeric", timeZone: "UTC" })
+          .format(new Date(Date.UTC(view.y, view.m, 1)));
+
+      const offset = (new Date(Date.UTC(view.y, view.m, 1)).getUTCDay() + 6) % 7;
+      const days = new Date(Date.UTC(view.y, view.m + 1, 0)).getUTCDate();
+      const now = new Date();
+      const todayIso = isoOf(now.getFullYear(), now.getMonth(), now.getDate());
+
+      for (let i = 0; i < offset; i++) grid.append(node("span", "mv-cell empty-cell"));
+
+      let firstWithEvents = null;
+      for (let d = 1; d <= days; d++) {
+        const iso = isoOf(view.y, view.m, d);
+        const items = map.get(iso) || [];
+        if (items.length && !firstWithEvents) firstWithEvents = iso;
+        const cell = node("button", "mv-cell");
+        cell.type = "button";
+        if (items.length) cell.classList.add("has-events");
+        if (iso === todayIso) cell.classList.add("today");
+        if (iso === "2027-10-31") cell.classList.add("deadline-day");
+        cell.setAttribute("aria-pressed", String(view.day === iso));
+        cell.setAttribute("aria-label", formatDate(iso) + ", " +
+          (items.length ? items.length + " milestone" + (items.length > 1 ? "s" : "") : "no milestone"));
+        cell.append(node("span", "mv-num", String(d)));
+        if (items.length) {
+          const dots = node("span", "mv-dots");
+          items.slice(0, 4).forEach(item => dots.append(node("i", "dot " + slug(item.moment.priority))));
+          cell.append(dots);
+          if (items.length > 4) cell.append(node("span", "mv-more", "+" + (items.length - 4)));
+        }
+        cell.addEventListener("click", () => { view.day = iso; renderMonth(); });
+        grid.append(cell);
+      }
+
+      const inMonth = view.day && view.day.startsWith(isoOf(view.y, view.m, 1).slice(0, 7));
+      if (!inMonth) view.day = (todayIso.startsWith(isoOf(view.y, view.m, 1).slice(0, 7)) && map.has(todayIso))
+        ? todayIso : firstWithEvents;
+      if (!inMonth && view.day) {
+        grid.querySelectorAll(".mv-cell").forEach(c => {
+          if (c.getAttribute("aria-label") && c.getAttribute("aria-label").startsWith(formatDate(view.day))) {
+            c.setAttribute("aria-pressed", "true");
+          }
+        });
+      }
+      renderDay(map);
+
+      const idx = monthIndex(view.y, view.m);
+      document.getElementById("mv-prev").disabled = idx <= monthIndex(RANGE_START.y, RANGE_START.m);
+      document.getElementById("mv-next").disabled = idx >= monthIndex(RANGE_END.y, RANGE_END.m);
+    }
+
+    function renderDay(map) {
+      const box = document.getElementById("mv-day");
+      box.replaceChildren();
+      if (!view.day) {
+        box.append(node("p", "empty", "Quiet month: time for readouts and run tasks."));
+        return;
+      }
+      const items = map.get(view.day) || [];
+      box.append(node("h3", "", formatDate(view.day)));
+      if (view.day === "2027-10-31") {
+        box.append(node("p", "mv-hint", "Notice deadline for 1 January switches."));
+      }
+      if (!items.length) {
+        box.append(node("p", "empty", "No milestone on this day."));
+        return;
+      }
+      const list = node("ul", "mv-list");
+      items.forEach(item => {
+        const li = node("li");
+        const button = node("button", "mv-item");
+        button.type = "button";
+        const top = node("span", "mv-item-top");
+        top.append(
+          node("span", "badge " + slug(item.moment.priority), item.moment.priority),
+          node("span", "mv-type", item.type)
+        );
+        if (item.tentative) top.append(node("span", "badge unconfirmed", "date to confirm"));
+        button.append(top, node("span", "mv-name", item.moment.moment),
+          node("span", "mv-hint", item.moment.lever + " · open the project"));
+        button.addEventListener("click", () => { setView("timeline"); openMoment(item.moment.id); });
+        li.append(button);
+        list.append(li);
+      });
+      box.append(list);
+    }
+
+    function setView(mode) {
+      view.mode = mode;
+      document.querySelectorAll(".view-btn").forEach(b =>
+        b.setAttribute("aria-pressed", String(b.dataset.view === mode)));
+      document.getElementById("calendar").hidden = mode !== "timeline";
+      document.getElementById("month-view").hidden = mode !== "month";
+      try { localStorage.setItem("pc27-view", mode); } catch (e) { /* storage unavailable */ }
+      if (mode === "month") renderMonth();
+    }
+
+    function initialise() {
+      const insightContainer = document.getElementById("insights");
+      insights.forEach(insight => {
+        const paragraph = node("p", "insight");
+        paragraph.append(
+          node("strong", "", insight.title + ": "),
+          document.createTextNode(insight.text)
+        );
+        if (insight.source) {
+          const source = link("Source ↗", insight.source);
+          source.className = "source-inline";
+          source.setAttribute("aria-label", "Source: " + insight.title);
+          paragraph.append(source);
+        }
+        insightContainer.append(paragraph);
+      });
+
+      priorities.forEach(priority => {
+        const count = moments.filter(moment => moment.priority === priority).length;
+        const stat = node("div", "stat");
+        stat.append(
+          node("span", "stat-number", String(count)),
+          node("span", "stat-label", priority)
+        );
+        document.getElementById("summary").append(stat);
+      });
+
+      buildFilters("priority-filters", priorities, "priority");
+      buildFilters("lever-filters", levers, "lever");
+
+
+      const calendar = document.getElementById("calendar");
+      months.forEach((name, index) => {
+        const section = node("section", "month");
+        section.id = "month-" + index;
+        section.setAttribute("aria-labelledby", "month-heading-" + index);
+
+        const heading = node("h2", "", name);
+        heading.id = "month-heading-" + index;
+        heading.tabIndex = -1;
+        heading.append(node("span", "month-year", "2027"));
+
+        const body = node("div", "month-body");
+        monthBodies.push(body);
+        section.append(heading, body);
+        calendar.append(section);
+      });
+
+      const currentMonth = new Date().getMonth();
+      const monthButton = document.getElementById("this-month");
+      monthButton.title = "Go to " + months[currentMonth] + " in the 2027 calendar";
+      monthButton.setAttribute("aria-label", monthButton.title);
+      monthButton.addEventListener("click", () => {
+        if (view.mode === "month") {
+          const now = new Date();
+          const target = clampToRange(now.getFullYear(), now.getMonth());
+          view.y = target.y; view.m = target.m; view.day = null;
+          renderMonth();
+          document.getElementById("month-view").scrollIntoView({ behavior: scrollBehavior(), block: "start" });
+          return;
+        }
+        const heading = document.getElementById("month-heading-" + currentMonth);
+        document.getElementById("month-" + currentMonth).scrollIntoView({
+          behavior: scrollBehavior(),
+          block: "start"
+        });
+        heading.focus({ preventScroll: true });
+      });
+
+      const sourceURLs = [...new Set([
+        ...insights.map(insight => insight.source),
+        ...moments.map(moment => moment.source)
+      ].filter(Boolean))];
+
+      sourceURLs.forEach(url => {
+        const item = node("li");
+        item.append(link(url, url));
+        document.getElementById("sources").append(item);
+      });
+
+      const now = new Date();
+      const start = clampToRange(now.getFullYear(), now.getMonth());
+      view.y = start.y; view.m = start.m; view.ready = true;
+      document.getElementById("mv-prev").addEventListener("click", () => {
+        const t = clampToRange(view.y, view.m - 1); view.y = t.y; view.m = t.m; view.day = null; renderMonth();
+      });
+      document.getElementById("mv-next").addEventListener("click", () => {
+        const t = clampToRange(view.y, view.m + 1); view.y = t.y; view.m = t.m; view.day = null; renderMonth();
+      });
+      document.querySelectorAll(".view-btn").forEach(b =>
+        b.addEventListener("click", () => setView(b.dataset.view)));
+
+      document.getElementById("export-ics").addEventListener("click", () => {
+        download("prevention-calendar-2027.ics", "text/calendar;charset=utf-8",
+          buildICS(moments.filter(matches)));
+      });
+      document.getElementById("export-csv").addEventListener("click", () => {
+        download("prevention-project-tracker-2027.csv", "text/csv;charset=utf-8",
+          "\uFEFF" + buildCSV(moments.filter(matches)));
+      });
+
+      renderCalendar();
+      let saved = null;
+      try { saved = localStorage.getItem("pc27-view"); } catch (e) { saved = null; }
+      if (saved === "month") setView("month");
+    }
+
+    // Print expanded details, then restore the user's previous view.
+    let previouslyOpen = [];
+    window.addEventListener("beforeprint", () => {
+      previouslyOpen = Array.from(
+        document.querySelectorAll(".card[open]"), card => card.id
+      );
+      document.querySelectorAll(".card").forEach(card => { card.open = true; });
+    });
+    window.addEventListener("afterprint", () => {
+      document.querySelectorAll(".card").forEach(card => {
+        card.open = previouslyOpen.includes(card.id);
+      });
+    });
+
+    initialise();
+
+    // ---------- Installable app ----------
+    (function setUpInstall() {
+      const standalone = window.matchMedia("(display-mode: standalone)").matches ||
+                         window.navigator.standalone === true;
+      const button = document.getElementById("install-app");
+      const hint = document.getElementById("install-hint");
+      let deferred = null;
+      if (!standalone && location.protocol !== "file:") button.hidden = false;
+      window.addEventListener("beforeinstallprompt", event => {
+        event.preventDefault();
+        deferred = event;
+        if (!standalone) button.hidden = false;
+      });
+      button.addEventListener("click", async () => {
+        if (deferred) {
+          deferred.prompt();
+          try { await deferred.userChoice; } catch (e) { /* dismissed */ }
+          deferred = null;
+          return;
+        }
+        hint.hidden = !hint.hidden;
+      });
+      window.addEventListener("appinstalled", () => { button.hidden = true; hint.hidden = true; });
+      if ("serviceWorker" in navigator && location.protocol.startsWith("http")) {
+        navigator.serviceWorker.register("sw.js").catch(() => { /* offline mode unavailable */ });
+      }
+    })();
+  </script>
+</body>
+</html>
