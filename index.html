@@ -297,6 +297,83 @@
         ],
         source: "https://fr.movember.com"
       }
+      ,
+      {
+        id: "tender-radar",
+        kind: "Business",
+        month: 0,
+        priority: "Big bet",
+        moment: "Public-sector tender radar 2027",
+        dates: "Q1 2027 (4 Jan to 31 Mar)",
+        dateStatus: "Internal plan",
+        lever: "Acquisition",
+        markets: "FR",
+        project: "Build the radar of every public-sector health tender ahead: regional conventions for territorial agents (from 2027), the Ucanss tender launched in April 2026, the hospital civil service reform (possibly 2028), with a go/no-go memo per tender",
+        why: "Bercy came after about three years of preparation that started in 2022; the next wave of public tenders needs the same head start",
+        kpi: "Tenders mapped and qualified, go/no-go memos delivered, bids submitted",
+        teams: "Public-sector sales, Insurance, Legal, CEO office",
+        phases: [
+          { label: "Tender radar", start: "2027-01-04", end: "2027-03-31" }
+        ],
+        source: "https://www.journaldunet.com/fintech/1542977-une-war-room-des-entrainements-et-plusieurs-lecons-alan-raconte-les-coulisses-de-sa-conquete-de-bercy/"
+      },
+      {
+        id: "vivatech",
+        kind: "Business",
+        month: 5,
+        priority: "Run",
+        moment: "VivaTech 2027",
+        dates: "16–19 Jun",
+        dateStatus: "Announced by the organiser",
+        lever: "Brand",
+        markets: "FR",
+        project: "Alan's VivaTech plan: a stage slot for the CEO, a live Mo demo, prospect meetings booked before the show, and a stand to recruit the next Founder Associates",
+        why: "Europe's largest tech event, in Paris: brand, sales and hiring in the same four days",
+        kpi: "Talk slot secured, prospect meetings held, FA applications received",
+        teams: "Brand, Sales, Talent, CEO office",
+        phases: [
+          { label: "VivaTech", start: "2027-06-16", end: "2027-06-19" }
+        ],
+        source: "https://vivatech.com"
+      },
+      {
+        id: "renewal-war-room",
+        kind: "Business",
+        month: 8,
+        priority: "Big bet",
+        moment: "Renewal war room, before 31 October",
+        dates: "1 Sep to 31 Oct",
+        dateStatus: "Internal plan; notice deadline usually 31 Oct",
+        lever: "Retention",
+        markets: "FR",
+        project: "Weekly review of the largest accounts up for renewal: risk score, the story behind any price change, prevention results per client, one owner per account",
+        why: "Employers usually give notice by 31 October to switch on 1 January: an account kept costs far less than an account won",
+        kpi: "Retention rate of the largest accounts, accounts saved after a risk flag",
+        teams: "Account management, Sales, Finance, Data",
+        phases: [
+          { label: "Renewal war room", start: "2027-09-01", end: "2027-10-31" }
+        ],
+        source: "https://alan.com/fr-fr/assurance-sante/mutuelle-entreprise/a/changer-mutuelle-entreprise"
+      },
+      {
+        id: "plfss-2028",
+        kind: "Business",
+        month: 9,
+        priority: "Quick win",
+        moment: "Social security budget 2028: 48-hour impact memo",
+        dates: "Early October",
+        dateStatus: "To confirm (the 2027 bill was presented on 1 Oct 2026)",
+        lever: "Retention",
+        markets: "FR",
+        project: "Within 48 hours of the bill: an impact memo for the CEO and a one-page FAQ for sales and clients, out before the 31 October deadline",
+        why: "Clients decide on renewals with the new bill on the table: speed and clarity keep them",
+        kpi: "Memo delivered within 48 hours, FAQ used in renewal conversations",
+        teams: "Public affairs, Finance, Sales, CEO office",
+        phases: [
+          { label: "Impact memo", start: "2027-10-01", end: "2027-10-03", tentative: true }
+        ],
+        source: "https://www.legifiscal.fr/actualites-fiscales/4657-presentation-plfss-2027.html"
+      }
     ];
 
     const insights = [
@@ -687,6 +764,7 @@
     .run { color: #515863; background: #eceef1; }
     .option { color: #5f6572; background: transparent; border: 1px solid #8b929f; }
     .lever-tag { background: var(--tint); color: #41485b; }
+    .business { color: #3f5274; background: white; border: 1px solid #b9c6de; }
     .unconfirmed {
       color: #765c2a;
       background: #fff7df;
@@ -817,7 +895,7 @@
   <header class="hero">
     <div class="shell">
       <h1>Prevention Calendar 2027</h1>
-      <p class="subtitle">14 health moments, 5 big bets, every project tied to a P&amp;L lever</p>
+      <p class="subtitle">14 health moments and 4 business moments, every project tied to a P&amp;L lever</p>
       <div class="insights" id="insights" aria-label="Key insights"></div>
     </div>
   </header>
@@ -1003,6 +1081,9 @@
         node("span", "lever-tag", moment.lever)
       );
 
+      if (moment.kind === "Business") {
+        meta.append(node("span", "badge business", "Business moment"));
+      }
       if (/to confirm/i.test(moment.dateStatus)) {
         meta.append(node("span", "badge unconfirmed", "date to confirm"));
       }
@@ -1171,7 +1252,7 @@
       });
 
       document.getElementById("results").textContent =
-        selected.length + " of " + moments.length + " health moments";
+        selected.length + " of " + moments.length + " moments";
       if (view.mode === "month") renderMonth();
     }
 
