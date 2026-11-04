@@ -1,11 +1,12 @@
 // Offline support: network first, cached copy when offline.
-const CACHE = "prevention-calendar-2027-v1";
+const CACHE = "prevention-calendar-2027-v2";
 const ASSETS = [
   "./",
   "./index.html",
   "./manifest.webmanifest",
   "./icon-192.png",
   "./icon-512.png",
+  "./icon-maskable-512.png",
   "./apple-touch-icon.png"
 ];
 

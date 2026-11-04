@@ -1,16 +1,16 @@
 {
   "name": "Prevention Calendar 2027",
   "short_name": "Prevention 27",
-  "description": "14 health moments, 5 big bets, every project tied to a P&L lever.",
+  "description": "14 health moments and 4 business moments, every project tied to a P&L lever.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
   "orientation": "portrait",
-  "background_color": "#ffffff",
-  "theme_color": "#4661aa",
+  "background_color": "#1456de",
+  "theme_color": "#1456de",
   "icons": [
     { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
     { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
-    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+    { "src": "icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
   ]
 }
